@@ -14,6 +14,10 @@ def about(station, date):
             "date": date,
             "temperatures": temperature}
 
+@app.route("/api/v1/<word>")
+def api(word):
+    return str(word)
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
